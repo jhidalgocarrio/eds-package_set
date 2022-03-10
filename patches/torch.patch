@@ -1,0 +1,23 @@
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -0,0 +1,20 @@
++cmake_minimum_required(VERSION 3.9)
++
++# Header Files
++install(DIRECTORY include/torch DESTINATION include)
++install(DIRECTORY include/ATen DESTINATION include)
++install(DIRECTORY include/c10 DESTINATION include)
++install(DIRECTORY include/c10d DESTINATION include)
++install(DIRECTORY include/caffe2 DESTINATION include)
++install(DIRECTORY include/TH DESTINATION include)
++install(DIRECTORY include/THCUNN DESTINATION include)
++
++# CMake configs
++install(DIRECTORY share/cmake/ATen DESTINATION share/cmake)
++install(DIRECTORY share/cmake/Caffe2 DESTINATION share/cmake)
++install(DIRECTORY share/cmake/Gloo DESTINATION share/cmake)
++install(DIRECTORY share/cmake/Tensorpipe DESTINATION share/cmake)
++install(DIRECTORY share/cmake/Torch DESTINATION share/cmake)
++
++# Library
++install(DIRECTORY lib/ DESTINATION lib)
