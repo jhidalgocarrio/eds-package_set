@@ -1,0 +1,25 @@
+name: eds
+
+version_control:
+
+    - bundles/eds:
+        github: jhidalgocarrio/bundles-eds
+        branch: $ROCK_BRANCH
+
+    - slam/eds:
+        github: jhidalgocarrio/slam-eds
+        branch: $ROCK_BRANCH
+
+    - slam/orogen/eds:
+        github: jhidalgocarrio/slam-orogen-eds
+        branch: $ROCK_BRANCH
+
+    - tools/torch:
+        type: archive
+        url: https://download.pytorch.org/libtorch/lts/1.8/cu102/libtorch-cxx11-abi-shared-with-deps-1.8.2%2Bcu102.zip
+        archive_dir: libtorch
+
+    - perception/depthnn:
+        github: jhidalgocarrio/perception-depthnn
+        branch: $ROCK_BRANCH
+

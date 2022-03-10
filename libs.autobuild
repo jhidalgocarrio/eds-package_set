@@ -1,0 +1,8 @@
+# IMPORTANT: new packages must be added at the top of this file
+# They must NEVER be added to other files
+
+bundle_package 'bundles/eds'
+cmake_package 'slam/eds'
+cmake_package 'tools/torch'
+cmake_package 'perception/depthnn'
+
