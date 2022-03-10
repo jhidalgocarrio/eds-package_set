@@ -1,0 +1,9 @@
+<package>
+  <description brief="PyTorch C++ API">
+  The public portions of the PyTorch C++ API.
+  </description>
+  <author>Facebook, Inc and All Contributors</author>
+  <license>BSD-style license, as found in the LICENSE file.</license>
+  <url>https://pytorch.org</url>
+  <tags>stable</tags>
+</package>
