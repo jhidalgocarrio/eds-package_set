@@ -3,17 +3,13 @@
 
 bundle_package 'bundles/eds'
 cmake_package 'slam/eds'
-import_package 'tools/torch' do |pkg|
-    def pkg.build
-    end
-
-    def pkg.install
+cmake_package 'tools/torch' do |pkg|
+    def pkg.prepare
         super
         in_dir (srcdir) do
-            run("build", "wget https://download.ifi.uzh.ch/rpg/eds/patches/torch.patch -O CMakeLists.txt")
+            run("update", "wget https://download.ifi.uzh.ch/rpg/eds/patches/torch.patch -O CMakeLists.txt")
         end
     end
-
 end
 
 cmake_package 'perception/depthnn'
