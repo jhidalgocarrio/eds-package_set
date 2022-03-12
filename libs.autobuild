@@ -12,5 +12,12 @@ cmake_package 'tools/torch' do |pkg|
     end
 end
 
-cmake_package 'perception/depthnn'
+cmake_package 'perception/depthnn' do |pkg|
+    def pkg.prepare
+        super
+        in_dir (srcdir) do
+            run("update", "if [ ! -f $AUTOPROJ_CURRENT_ROOT/install/cache/midas_v21.pt ] \n then \n wget https://download.ifi.uzh.ch/rpg/eds/models/midas_v21.pt -O $AUTOPROJ_CURRENT_ROOT/install/cache/midas_v21.pt \n fi")
+        end
+    end
+end
 
