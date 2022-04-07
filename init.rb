@@ -48,7 +48,6 @@ if current_flavor.name != 'master' && Autoproj::PackageSet.respond_to?(:add_sour
     Autoproj::PackageSet.add_source_file "source-stable.yml"
 end
 
-require File.join(__dir__, 'rock', 'cxx')
 if Autoproj.respond_to?(:workspace) # autoproj 2.0
     Rock.setup_cxx_support(Autoproj.workspace.os_package_resolver, Autoproj.config)
 else
