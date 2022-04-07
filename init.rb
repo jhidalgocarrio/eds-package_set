@@ -1,38 +1,5 @@
 # Orocos Specific ignore rules
 #
-# Ignore log files generated from the orocos/orogen components
-ignore(/\.log$/, /\.ior$/, /\.idx$/)
-# Ignore all text files except CMakeLists.txt
-ignore(/(^|\/)(?!CMakeLists)[^\/]+\.txt$/)
-# We don't care about the manifest being changed, as autoproj *will* take
-# dependency changes into account
-ignore(/manifest\.xml$/)
-# Ignore vim swap files
-ignore(/\.sw?$/)
-# Ignore the numerous backup files
-ignore(/~$/)
-
-
-# Ruby 1.8 is completly outdated, if you modify this, take respect to the addition checks below against 1.9 
-if defined?(RUBY_VERSION) && (RUBY_VERSION =~ /^1\.8\./)
-    Autoproj.error "Ruby 1.8 is not supported by Rock anymore"
-    Autoproj.error ""
-    Autoproj.error "Use Rock's bootstrap.sh script to install Rock"
-    Autoproj.error "See http://rock-robotics.org/stable/documentation/installation.html for more information"
-    exit 1
-end
-
-require 'autoproj/gitorious'
-if !Autoproj.has_source_handler? 'github'
-    Autoproj.gitorious_server_configuration('GITHUB', 'github.com', :http_url => 'https://github.com')
-end
-
-require File.join(__dir__, 'rock/flavor_definition')
-require File.join(__dir__, 'rock/flavor_manager')
-require File.join(__dir__, 'rock/in_flavor_context')
-require File.join(__dir__, 'rock/current_release')
-require File.join(__dir__, 'rock/python')
-
 Rock.flavors.define 'stable'
 Rock.flavors.alias 'stable', 'next'
 Rock.flavors.define 'master', :implicit => true
