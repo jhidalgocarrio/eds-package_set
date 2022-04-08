@@ -11,8 +11,9 @@ configuration_option('EDS_BRANCH', 'string',
         "Stay with the default ('master') if you want to use EDS with DSO backend",
         "otherwise select ('ceres')"])
 
+Autoproj.config.get('EDS_BRANCH')
 #Autoproj.env_set 'EDS_BRANCH', Autoproj.config.get('EDS_BRANCH')
-Autoproj.config.set 'EDS_BRANCH', Autoproj.config.get('EDS_BRANCH')
+#Autoproj.config.set 'EDS_BRANCH', Autoproj.env['EDS_BRANCH']
 
 #pp "SELECTED EDS: " + Autoproj.env['EDS_BRANCH']
 
