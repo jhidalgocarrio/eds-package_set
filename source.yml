@@ -7,11 +7,11 @@ version_control:
         branch: $ROCK_BRANCH
 
     - slam/eds:
-        github: jhidalgocarrio/slam-eds
+        github: uzh-rpg/slam-eds
         branch: $EDS_BRANCH
 
     - slam/orogen/eds:
-        github: jhidalgocarrio/slam-orogen-eds
+        github: uzh-rpg/slam-orogen-eds
         branch: $EDS_BRANCH
 
     - tools/torch:
