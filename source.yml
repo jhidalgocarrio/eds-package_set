@@ -8,11 +8,11 @@ version_control:
 
     - slam/eds:
         github: jhidalgocarrio/slam-eds
-        branch: $ROCK_BRANCH
+        branch: $EDS_BRANCH
 
     - slam/orogen/eds:
         github: jhidalgocarrio/slam-orogen-eds
-        branch: $ROCK_BRANCH
+        branch: $EDS_BRANCH
 
     - tools/torch:
         type: archive
