@@ -3,7 +3,7 @@ name: eds
 version_control:
 
     - bundles/eds:
-        github: jhidalgocarrio/bundles-eds
+        github: uzh-rpg/bundles-eds
         branch: $ROCK_BRANCH
 
     - slam/eds:
